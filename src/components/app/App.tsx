@@ -2,6 +2,9 @@ import React from "react";
 import { connect } from "react-redux";
 import * as INT from "./types";
 import { testAction } from "../../redux/actions/testActions/test";
+// Components
+import { UNCButton as Button } from "../consumables/button/Button";
+import { UNContainer as Container } from "../consumables/container/Container";
 
 /**
  * App Component
@@ -16,10 +19,33 @@ export const UNCApp: React.FC<INT.IAppProps> = ({
   testState,
   testAction,
 }): JSX.Element => {
+  const margin = "50px 0 50px";
+  const padding = "20px 40px 20px";
+
   return (
     <div className="test-class" data-test="app-component">
-      <button onClick={() => testAction(true)}>Set True</button>
-      <button onClick={() => testAction(false)}>Set False</button>
+      <Container
+        type="centerHorizontal"
+        margin={margin}
+        padding={padding}
+        customStyles={{ border: "2px red solid" }}
+      >
+        <Button type="success" action={() => testAction(true)}>
+          Set True
+        </Button>
+        <Button
+          type="primary"
+          action={() => testAction(false)}
+          customStyles={{ boxShadow: "5px 10px #888888" }}
+        >
+          Set False
+        </Button>
+
+        <Button type="clear" action={() => testAction(false)}>
+          Clear All
+        </Button>
+      </Container>
+
       <div style={{ display: "flex" }}>
         {testState ? <p>Test State is TRUE</p> : <p>Test State is FALSE</p>}
       </div>

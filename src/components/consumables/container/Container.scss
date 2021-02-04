@@ -1,0 +1,33 @@
+.container {
+  &.--leadingHorizontal {
+    @include flex-box(row, null, flex-start, center);
+  }
+
+  &.--leadingVertical {
+    @include flex-box(column, null, flex-start, center);
+  }
+
+  &.--trailingHorizontal {
+    @include flex-box(row, null, flex-end, center);
+  }
+
+  &.--trailingVertical {
+    @include flex-box(column, null, flex-end, center);
+  }
+
+  &.--centerHorizontal {
+    @include flex-box(row, null, center, center);
+  }
+
+  &.--centerVertical {
+    @include flex-box(column, null, center, center);
+  }
+
+  &.--evenHorizontal {
+    @include flex-box(row, null, space-evenly, center);
+  }
+
+  &.--evenVertical {
+    @include flex-box(column, null, space-evenly, center);
+  }
+}

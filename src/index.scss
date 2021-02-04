@@ -9,9 +9,13 @@
 // components
 @import "./components/app/App.scss";
 
-body {
-// height: 100vh;
-}
+// consumables
+@import "./components/consumables/button/Button.scss";
+@import "./components/consumables/container/Container.scss";
+@import "./components/consumables/header/Header.scss";
+@import "./components/consumables/text/Text.scss";
+
+body {}
 
 *:focus {
   outline: none;
@@ -27,4 +31,15 @@ body {
   right: 0;
   z-index: 9999;
   @include flex-box(null, null, center, center);
+}
+
+
+button {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
