@@ -1,0 +1,30 @@
+@import "~reset-css/sass/reset";
+
+// helpers
+@import "./styles/functions/functions";
+@import "./styles/mixins/mixins";
+@import "./styles/mixins/typography";
+@import "./styles/variables/variables";
+
+// components
+@import "./components/app/App.scss";
+
+body {
+// height: 100vh;
+}
+
+*:focus {
+  outline: none;
+  outline: transparent;
+}
+
+// LOADER
+.loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  @include flex-box(null, null, center, center);
+}

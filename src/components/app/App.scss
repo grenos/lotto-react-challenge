@@ -1,0 +1,20 @@
+// @mixin flex-box($direction, $wrap, $justify, $align) {
+//   display: flex;
+//   flex-direction: $direction;
+//   flex-wrap: $wrap;
+//   justify-content: $justify;
+//   align-items: $align;
+// }
+
+
+.test-class {
+  background-color: $white;
+  height: 100%;
+  @include flex-box(column, null, center, center);
+}
+
+@include phone-668 {
+  .test-class {
+    background-color: $grey_dark;
+  }
+}
