@@ -1,5 +1,3 @@
-import { CSSProperties } from "react";
-
 export interface IButtonProps extends React.CSSProperties {
   children: any;
   backgroundcolor?: string;
@@ -14,5 +12,5 @@ export interface IButtonProps extends React.CSSProperties {
     | "centerVertical"
     | "evenHorizontal"
     | "evenVertical";
-  customStyles?: any;
+  customStyles?: { [key: string]: React.CSSProperties };
 }

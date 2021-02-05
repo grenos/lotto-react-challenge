@@ -1,6 +1,6 @@
-export interface IButtonProps {
+export interface IButtonProps extends React.CSSProperties {
   children: String | SVGElement;
   type: "success" | "primary" | "clear";
   action: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  customStyles?: any;
+  customStyles?: { [key: string]: React.CSSProperties };
 }

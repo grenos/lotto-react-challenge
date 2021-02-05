@@ -6,6 +6,14 @@ import { testAction } from "../../redux/actions/testActions/test";
 import { UNCButton as Button } from "../consumables/button/Button";
 import { UNContainer as Container } from "../consumables/container/Container";
 
+const customStylesContainer = {
+  border: "2px red solid",
+} as { [key: string]: React.CSSProperties };
+
+const customStylesButton = {
+  boxShadow: "5px 10px #888888",
+} as { [key: string]: React.CSSProperties };
+
 /**
  * App Component
  *
@@ -28,7 +36,7 @@ export const UNCApp: React.FC<INT.IAppProps> = ({
         type="centerHorizontal"
         margin={margin}
         padding={padding}
-        customStyles={{ border: "2px red solid" }}
+        customStyles={{ ...customStylesContainer }}
       >
         <Button type="success" action={() => testAction(true)}>
           Set True
@@ -36,7 +44,7 @@ export const UNCApp: React.FC<INT.IAppProps> = ({
         <Button
           type="primary"
           action={() => testAction(false)}
-          customStyles={{ boxShadow: "5px 10px #888888" }}
+          customStyles={{ ...customStylesButton }}
         >
           Set False
         </Button>
