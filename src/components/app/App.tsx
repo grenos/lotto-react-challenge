@@ -5,6 +5,7 @@ import { testAction } from "../../redux/actions/testActions/test";
 // Components
 import { UNCButton as Button } from "../consumables/button/Button";
 import { UNContainer as Container } from "../consumables/container/Container";
+import { UNCHeader as Header } from "../consumables/header/Header";
 
 const customStylesContainer = {
   border: "2px red solid",
@@ -48,11 +49,14 @@ export const UNCApp: React.FC<INT.IAppProps> = ({
         >
           Set False
         </Button>
-
         <Button type="clear" action={() => testAction(false)}>
           Clear All
         </Button>
       </Container>
+
+      <Header type="l" bold>
+        This is a header coponent
+      </Header>
 
       <div style={{ display: "flex" }}>
         {testState ? <p>Test State is TRUE</p> : <p>Test State is FALSE</p>}

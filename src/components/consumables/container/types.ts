@@ -1,4 +1,4 @@
-export interface IButtonProps extends React.CSSProperties {
+export interface IContainerProps extends React.CSSProperties {
   children: any;
   backgroundcolor?: string;
   margin?: string;

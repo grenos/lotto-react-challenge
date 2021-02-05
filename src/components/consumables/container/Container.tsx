@@ -7,7 +7,7 @@ import * as INT from "./types";
  * @function
  * @return {JSX.Element}
  */
-export const UNContainer: React.FC<INT.IButtonProps> = ({
+export const UNContainer: React.FC<INT.IContainerProps> = ({
   children,
   backgroundcolor,
   type,
