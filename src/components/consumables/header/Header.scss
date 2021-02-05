@@ -1,0 +1,22 @@
+.header{
+  font-family: lato_regular, sans-serif;
+  &.--xl {
+    font-size: $xl-size
+  }
+
+  &.--l {
+    font-size: $l-size
+  }
+
+  &.--m {
+    font-size: $m-size
+  }
+
+  &.--s {
+    font-size: $s-size
+  }
+
+  &.--bold {
+    font-weight: bold;
+  }
+}

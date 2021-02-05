@@ -1,0 +1,22 @@
+.text{
+  font-family: lato_regular, sans-serif;
+  &.--l {
+    font-size: $l-size
+  }
+
+  &.--m {
+    font-size: $m-size
+  }
+
+  &.--s {
+    font-size: $s-size
+  }
+
+  &.--xs {
+    font-size: $xs-size
+  }
+
+  &.--bold {
+    font-weight: bold;
+  }
+}

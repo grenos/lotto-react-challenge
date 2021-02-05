@@ -1,0 +1,25 @@
+.button{
+  color: $white;
+  font-family: lato_regular, sans-serif;
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+  margin: 10px;
+
+  &.--success {
+    background-color: $success;
+    font-size: $m-size;
+    width: 230px;
+  }
+  &.--primary{
+    background-color: $accent;
+    font-size: $s-size;
+    
+  }
+  &.--clear{
+    background-color: none;
+    font-size: $s-size;
+    border: 2px solid $black;
+    color: $black;
+  }
+}

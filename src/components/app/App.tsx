@@ -2,6 +2,16 @@ import React from "react";
 import { connect } from "react-redux";
 import * as INT from "./types";
 import { testAction } from "../../redux/actions/testActions/test";
+// Components
+import { Button, Container, Header, Text } from "../consumables";
+
+const customStylesContainer = {
+  border: "2px red solid",
+} as { [key: string]: React.CSSProperties };
+
+const customStylesButton = {
+  boxShadow: "5px 10px #888888",
+} as { [key: string]: React.CSSProperties };
 
 /**
  * App Component
@@ -16,10 +26,38 @@ export const UNCApp: React.FC<INT.IAppProps> = ({
   testState,
   testAction,
 }): JSX.Element => {
+  const margin = "50px 0 50px";
+  const padding = "20px 40px 20px";
+
   return (
     <div className="test-class" data-test="app-component">
-      <button onClick={() => testAction(true)}>Set True</button>
-      <button onClick={() => testAction(false)}>Set False</button>
+      <Container
+        type="centerHorizontal"
+        margin={margin}
+        padding={padding}
+        customStyles={{ ...customStylesContainer }}
+      >
+        <Button type="success" action={() => testAction(true)}>
+          Set True
+        </Button>
+        <Button
+          type="primary"
+          action={() => testAction(false)}
+          customStyles={{ ...customStylesButton }}
+        >
+          Set False
+        </Button>
+        <Button type="clear" action={() => testAction(false)}>
+          Clear All
+        </Button>
+      </Container>
+
+      <Header type="l" bold>
+        This is a header component
+      </Header>
+
+      <Text type="xs">This is a text component</Text>
+
       <div style={{ display: "flex" }}>
         {testState ? <p>Test State is TRUE</p> : <p>Test State is FALSE</p>}
       </div>
