@@ -3,9 +3,7 @@ import { connect } from "react-redux";
 import * as INT from "./types";
 import { testAction } from "../../redux/actions/testActions/test";
 // Components
-import { UNCButton as Button } from "../consumables/button/Button";
-import { UNContainer as Container } from "../consumables/container/Container";
-import { UNCHeader as Header } from "../consumables/header/Header";
+import { Button, Container, Header, Text } from "../consumables";
 
 const customStylesContainer = {
   border: "2px red solid",
@@ -55,8 +53,10 @@ export const UNCApp: React.FC<INT.IAppProps> = ({
       </Container>
 
       <Header type="l" bold>
-        This is a header coponent
+        This is a header component
       </Header>
+
+      <Text type="xs">This is a text component</Text>
 
       <div style={{ display: "flex" }}>
         {testState ? <p>Test State is TRUE</p> : <p>Test State is FALSE</p>}
