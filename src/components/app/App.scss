@@ -1,11 +1,11 @@
-.test-class {
-  background-color: $white;
-  height: 100%;
-  @include flex-box(column, null, center, center);
+.app {
+  background-color: $background;
+  height: 100vh;
+  @include flex-box(row, null, center, center);
 }
 
 @include phone-668 {
   .test-class {
-    background-color: $grey_dark;
+    // background-color: $grey_dark;
   }
 }

@@ -9,22 +9,18 @@ import * as INT from "./types";
  */
 export const UNContainer: React.FC<INT.IContainerProps> = ({
   children,
-  backgroundcolor,
   type,
-  margin,
-  padding,
+  place,
   customStyles,
+  extraClass,
 }): JSX.Element => {
   return (
     <div
-      className={`container --${type}`}
+      className={`${
+        extraClass ? extraClass : ""
+      } container __${place} --${type}`}
       data-test="container-consumable"
-      style={{
-        backgroundColor: backgroundcolor,
-        margin: margin,
-        padding: padding,
-        ...customStyles,
-      }}
+      style={{ ...customStyles }}
     >
       {children}
     </div>

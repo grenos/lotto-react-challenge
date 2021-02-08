@@ -1,8 +1,6 @@
 export interface IContainerProps extends React.CSSProperties {
   children: any;
-  backgroundcolor?: string;
-  margin?: string;
-  padding?: string;
+  place?: string;
   type:
     | "leadingHorizontal"
     | "leadingVertical"
@@ -13,4 +11,5 @@ export interface IContainerProps extends React.CSSProperties {
     | "evenHorizontal"
     | "evenVertical";
   customStyles?: { [key: string]: React.CSSProperties };
+  extraClass?: string;
 }

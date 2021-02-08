@@ -3,14 +3,12 @@ import { connect } from "react-redux";
 import * as INT from "./types";
 import { testAction } from "../../redux/actions/testActions/test";
 // Components
-import { Button, Container, Header, Text } from "../consumables";
+import { Container } from "../consumables";
+import { InfoBox } from "../../components";
 
 const customStylesContainer = {
   border: "2px red solid",
-} as { [key: string]: React.CSSProperties };
-
-const customStylesButton = {
-  boxShadow: "5px 10px #888888",
+  minWidth: "600px",
 } as { [key: string]: React.CSSProperties };
 
 /**
@@ -26,41 +24,12 @@ export const UNCApp: React.FC<INT.IAppProps> = ({
   testState,
   testAction,
 }): JSX.Element => {
-  const margin = "50px 0 50px";
-  const padding = "20px 40px 20px";
-
   return (
-    <div className="test-class" data-test="app-component">
-      <Container
-        type="centerHorizontal"
-        margin={margin}
-        padding={padding}
-        customStyles={{ ...customStylesContainer }}
-      >
-        <Button type="success" action={() => testAction(true)}>
-          Set True
-        </Button>
-        <Button
-          type="primary"
-          action={() => testAction(false)}
-          customStyles={{ ...customStylesButton }}
-        >
-          Set False
-        </Button>
-        <Button type="clear" action={() => testAction(false)}>
-          Clear All
-        </Button>
+    <div className="app" data-test="app-component">
+      <Container type="leadingVertical" place="app">
+        <InfoBox />
+        <div style={{ height: 500, width: 600 }}></div>
       </Container>
-
-      <Header type="l" bold>
-        This is a header component
-      </Header>
-
-      <Text type="xs">This is a text component</Text>
-
-      <div style={{ display: "flex" }}>
-        {testState ? <p>Test State is TRUE</p> : <p>Test State is FALSE</p>}
-      </div>
     </div>
   );
 };
@@ -72,3 +41,31 @@ const mapStateToProps = (state: any) => {
 };
 
 export default connect(mapStateToProps, { testAction })(UNCApp);
+
+{
+  /* <Button type="success" action={() => testAction(true)}>
+Set True
+</Button>
+<Button
+type="primary"
+action={() => testAction(false)}
+customStyles={{ ...customStylesButton }}
+>
+Set False
+</Button>
+<Button type="clear" action={() => testAction(false)}>
+Clear All
+</Button> */
+}
+
+{
+  /* <Header type="l" bold>
+This is a header component
+</Header>
+
+<Text type="xs">This is a text component</Text>
+
+<div style={{ display: "flex" }}>
+{testState ? <p>Test State is TRUE</p> : <p>Test State is FALSE</p>}
+</div> */
+}

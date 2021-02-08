@@ -1,18 +1,33 @@
 .container {
+
+  &.__app {
+    // background-color: pink;
+    width: 600px;
+    min-height: 80px;
+  }
+
+  &.__infoBox {
+    // background-color: lime;
+    width: 100%;
+    height: 100%;
+    padding: 20px 0 20px;
+  }
+
+
   &.--leadingHorizontal {
-    @include flex-box(row, null, flex-start, center);
+    @include flex-box(row, null, flex-start, flex-start);
   }
 
   &.--leadingVertical {
-    @include flex-box(column, null, flex-start, center);
+    @include flex-box(column, null, flex-start, flex-start);
   }
 
   &.--trailingHorizontal {
-    @include flex-box(row, null, flex-end, center);
+    @include flex-box(row, null, flex-end, lex-end);
   }
 
   &.--trailingVertical {
-    @include flex-box(column, null, flex-end, center);
+    @include flex-box(column, null, flex-end, lex-end);
   }
 
   &.--centerHorizontal {

@@ -1,3 +1,4 @@
-import { UNCApp } from "./app/App";
+import App from "./app/App";
+import InfoBox from "./infoBox/InfoBox";
 
-export { UNCApp as APP };
+export { App, InfoBox };
